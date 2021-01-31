@@ -23,6 +23,7 @@ export MODEL_DIR=gs://brunolg_tpu_512/512_results
 export BATCH_PER=4
 export BATCH_SIZE=$(($BATCH_PER * $cores))
 export RESOLUTION=512
+export RESUME_KIMG=
 
 set -x
 exec python3 -m pdb -c continue run_training.py --data-dir "${data_dir}" --config="${config}" --dataset="${dataset}" --mirror-augment="${mirror}" --metrics="${metrics}" "$@"
