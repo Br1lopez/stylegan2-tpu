@@ -19,7 +19,7 @@ metrics=none
 
 export LABEL_SIZE=0
 #export LABEL_SIZE=full # uncomment this if using labels
-export MODEL_DIR=/content/drive/MyDrive/sgan/512_results
+export MODEL_DIR=gs://brunolg_tpu_512/512_results
 export BATCH_PER=4
 export BATCH_SIZE=$(($BATCH_PER * $cores))
 export RESOLUTION=512
