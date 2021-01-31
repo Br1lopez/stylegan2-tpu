@@ -6,20 +6,20 @@ set -e
 export NOISY=1
 export DEBUG=1
 
-export TPU_NAME=grpc://0.tcp.ngrok.io:12547
+export TPU_NAME=grpc://10.6.18.162:8470
 cores=8
 
 #config="config-a" # StyleGAN 1
 config="config-f" # StyleGAN 2
 
-data_dir=gs://sgappa-multi/stylegan-encoder/datasets
-dataset=animefaces
+data_dir=gs://brunolg_tpu_512/512_datasets
+dataset=002
 mirror=false
 metrics=none
 
 export LABEL_SIZE=0
 #export LABEL_SIZE=full # uncomment this if using labels
-export MODEL_DIR=gs://danbooru-euw4a/test/run50-danbooru-512-conditional-subset-128
+export MODEL_DIR=/content/drive/MyDrive/sgan/512_results
 export BATCH_PER=4
 export BATCH_SIZE=$(($BATCH_PER * $cores))
 export RESOLUTION=512
