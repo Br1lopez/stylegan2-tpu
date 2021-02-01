@@ -6,7 +6,7 @@ set -e
 export NOISY=1
 export DEBUG=1
 
-export TPU_NAME=grpc://10.6.18.162:8470
+export TPU_NAME=grpc://10.65.107.34:8470
 cores=8
 
 #config="config-a" # StyleGAN 1
